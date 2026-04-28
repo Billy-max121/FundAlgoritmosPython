@@ -1,4 +1,5 @@
 def CalcularIMC(peso, altura):
+    imc = 0.0
     # validar datos de entrada
     valido = ValidarEntrada(peso, altura)
     if valido == True:
