@@ -1,0 +1,22 @@
+def calculadora():
+    while True: # Aplicando el While
+        print("\n1.Suma | 2.Resta | 3.Multiplicación | 4.División | 5.Salir")
+        opcion = int(input("Elija una opción (1-5): "))
+
+        if opcion == 5: #Inicia el if
+            print("¡Adiós!")
+            break
+        elif 1 <= opcion <= 4:
+            n1 = float(input("Ingrese primer número: "))
+            n2 = float(input("Ingrese segundo número: "))
+            
+            match opcion:
+                case 1: print(f"Resultado: {n1 + n2}")
+                case 2: print(f"Resultado: {n1 - n2}")
+                case 3: print(f"Resultado: {n1 * n2}")
+                case 4: print(f"Resultado: {n1 / n2}" if n2 != 0 else "Error: Div por cero")
+        else: # Termina el if
+            print("Error: Opción inválida.")
+
+if __name__ == "__main__":
+    calculadora()
